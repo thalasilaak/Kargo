@@ -8,7 +8,7 @@ var output = inp;
 var temp = '';
 for(var i = 0; i < inp.length; i++)//new word starts from input stream
 {
-    temp = ''
+    temp = '';
     for(var j = 0; j < inp[i].length; j++)
     {
         if(inp[i].charAt(j) == '1')
