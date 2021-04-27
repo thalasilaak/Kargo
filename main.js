@@ -4,41 +4,44 @@ for(var k = 0; k < inp.length; k++)//converts all ints within inp array into str
 {
     inp[k] = String(inp[k]);
 }
+var output = inp;
+var temp = '';
 for(var i = 0; i < inp.length; i++)//new word starts from input stream
 {
+    temp = ''
     for(var j = 0; j < inp[i].length; j++)
     {
         if(inp[i].charAt(j) == '1')
         {
-            output+= 'one';
+            temp+= 'one';
         } else if(inp[i].charAt(j) == '2')
         {
-            output += 'two';
+            temp += 'two';
         } else if(inp[i].charAt(j) == '3')
         {
-            output += 'three';
+            temp += 'three';
         } else if(inp[i].charAt(j) == '4')
         {
-            output += 'four';
+            temp += 'four';
         } else if(inp[i].charAt(j) == '5')
         {
-            output += 'five';
+            temp += 'five';
         } else if(inp[i].charAt(j) == '6')
         {
-            output += 'six';
+            temp += 'six';
         } else if(inp[i].charAt(j) == '7')
         {
-            output+= 'seven';
+            temp += 'seven';
         } else if(inp[i].charAt(j) == '8')
         {
-            output += 'eight';
+            temp += 'eight';
         } else if(inp[i].charAt(j) == '9')
         {
-            output += 'nine';
+            temp += 'nine';
         } else {
-            output += 'zero';
+            temp += 'zero';
         }
     }//word ends
-    output += ', ';
+    output[i] = temp;
 }
-process.stdout.write(output);//changed to directly output instead of using different method
+process.stdout.write(output.toString());//changed to directly output instead of using different method
